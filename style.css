@@ -1,0 +1,99 @@
+/* 
+    fonts
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+/* 
+    css:
+*/
+
+:root {
+    --background-color: #FFEFEF;
+    --text-color: #D3DEDC;
+    --secondery-color: #7C99AC;
+    --back-back: #92A9BD;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+main .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align:  center;
+    padding: 15px;
+
+    background-color: var(--back-back);
+}
+
+/* From cssbuttons.io by @nikk7007 */
+button {
+    padding: 0.8em 1.8em;
+    border: 2px solid var(--background-color);
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: var(--background-color);
+    margin: 20px;
+   }
+   
+button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: var(--background-color);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+   
+button:hover::before {
+    width: 105%;
+}
+   
+button:hover {
+   color: #111;
+}
+
+.text {
+    text-align: left;
+}
+
+
+
+.author {
+    text-align: right;
+    color: var(--text-color);
+    margin: 30px 15px;
+    
+}
+   
+
